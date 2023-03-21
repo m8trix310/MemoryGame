@@ -7,14 +7,19 @@
 
 
 body {
-    height: 100vh;
+    height: 110vh;
     display: flex;
     background-color: rgba(0, 0, 0, 0.834);
     border: 15px ridge rgb(44, 75, 11); 
-    margin: 5px;
+    margin: 0px;
 
     
 }
+.container{
+  margin: 0 auto 0 auto;
+  padding: 10px;
+}
+
 .memory-game {
     width: 640px;
     height: 640px;
@@ -58,4 +63,23 @@ body {
 .front-face{
   
   transform: rotateY(180deg);
+}
+
+h1{
+  text-align: center;
+  color: green;
+  text-shadow: 2px 2px 2px rgba(236, 22, 14, 0.3);
+  font-family: papyrus;
+  font-size: 45px;
+  font-weight: bolder;
+  margin-top: 0;
+  
+}
+header{
+  width: 100vw;
+text-align: center;
+margin-top: 0px;
+padding:1px;
+top: 0%;
+/*border: 2px solid green;*/
 }
