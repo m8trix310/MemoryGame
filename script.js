@@ -1,6 +1,18 @@
  /****************************
   * Memory game from tutorial
   ****************************/
+ // ---CSS---
+ //change style
+ // Add monster cards
+ // background color to a dark theme
+ //change color of cards to a gradient and metalic color
+ //add shadow-box and shadow-text effects
+ // ---Javascript---
+ //make cards match and flip when they dont
+ //add a restart button
+ //add game over message
+ //add score 
+ 
 
  const cards = document.querySelectorAll('.memory-card');
 
