@@ -8,11 +8,11 @@ Monster mash logo was created  with a free online generator
 Images were downladed form a free png vector site  pngTree.com.
 Extra styling was all me -->
 
-# added generic timer that counts up. Not connected to code of the game
+
 # added a refresh button to restart the game. 
 # restyled the game from the original content and changed the theme. 
-#things to add in the future
-1 timer that is coded into the game
-2 game over message
-3 score for game
+# added timer to the game
+# added scoring
+# added end of game function 
+# added Game Over and You Won 
 
