@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -10,19 +12,30 @@ Monster Mash Memory Game
 </head>
 <body>
 
-<!--Game coding was from an online tutorial on Javascript 
-https://www.youtube.com/watch?v=ZniVgo8U7ek.
-Monster mash logo was created  with a free online generator
- https://cooltext.com/Logo-Design-Simple .
-Images were downladed form a free png vector site  pngTree.com.
-Extra styling was all me -->
-
-<div class="container">
+<!-- The base code for the game came from 
+https://www.youtube.com/watch?v=ZniVgo8U7ek tutorial. 
+I added timer , score and design to the game
+Images were downladed form a free png vector site pngTree.com.
+ -->
+<div>
+  
+      
+  <div class="container">
     <section class="memory-game">
         <header>
 <div><h1>Monster Mash</h1></div>
+
 <br>
 </header>
+<div class="score-container">
+
+<div><button onclick="window.location.reload();" class="start-btn">Restart Game</button></div>
+<div ><span class="message1"></span></div>
+<div class=" score" id="click">SCORE: <span class="aMatch">0</span></div>
+<div> <span class="message2"></div>
+<div class="timetaken"> Timer: <label id="minutes">00</label>:<label id="seconds">00</label></div>
+</div>
+        
          <div class="memory-card" data-framework="eyemons">
             <img class="front-face" src="img/EyeBallMons.png" alt="Eyeball Monster">
             <img class="back-face" src="img/title.png" alt="Memory Card">
@@ -83,7 +96,7 @@ Extra styling was all me -->
             <img class="back-face" src="img/title.png" alt="Memory Card">
           </div>
         </section>
-</div>
+
 <script src="script.js">
 
 </script>

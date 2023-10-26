@@ -1,24 +1,15 @@
  /****************************
-  * Memory game from tutorial
+  * Memory game 
   ****************************/
- // ---CSS---
- //change style
- // Add monster cards
- // background color to a dark theme
- //change color of cards to a gradient and metalic color
- //add shadow-box and shadow-text effects
- // ---Javascript---
- //make cards match and flip when they dont
- //add a restart button
- //add game over message
- //add score 
- 
 
  const cards = document.querySelectorAll('.memory-card');
-
+const para = document.querySelector('.aMatch');
+const message1 = document.querySelector(".message1");
+const message2 = document.querySelector(".message2");
  let hasFlippedCard = false;
 let lockBoard = false;
  let firstCard, secondCard;
+ let score = 1;
 
  function flipCard() {
    if (lockBoard) return;
@@ -29,6 +20,7 @@ let lockBoard = false;
      hasFlippedCard = true;
      firstCard = this;
      return;
+     
    }
 
    secondCard = this;
@@ -40,11 +32,15 @@ let lockBoard = false;
  function checkForMatch() {
    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
    isMatch ? disableCards() : unflipCards();
+  
+   
  }
 
+//if card is a match add one to the score
  function disableCards() {
    firstCard.removeEventListener('click', flipCard);
    secondCard.removeEventListener('click', flipCard);
+   para.innerHTML = score++;
    resetBoard();
  }
 
@@ -64,6 +60,43 @@ let lockBoard = false;
 [firstCard. secondCard] = [null, null];
 
  }
+  // timer
+  let minutesLabel = document.getElementById("minutes");
+  let secondsLabel = document.getElementById("seconds");
+  let totalSeconds = 100;
+  let x = setInterval(setTime, 1000);
+  
+  // time countdowns and stops at zero 
+  //show game over message with red background
+  function setTime() {
+    --totalSeconds;
+    secondsLabel.innerHTML = pad(totalSeconds % 60);
+    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+    if (totalSeconds <= 0 ){
+      clearInterval(x);
+      
+      message1.style.backgroundColor = "red";
+      message2.style.backgroundColor = "red";
+      message1.innerHTML = "Game";
+      message2.innerHTML = "Over";
+    } else if (score === 6 ) {
+      clearInterval(x);
+      message1.style.backgroundColor = "green";
+      message2.style.backgroundColor = "green";
+      message1.innerHTML = "You ";
+      message2.innerHTML = "Won";
+    }
+  }
+  
+
+  function pad(val) {
+    var valString = val + "";
+    if (valString.length < 2) {
+      return "0" + valString;
+    } else {
+      return valString;
+    }
+  }
 
  (function shuffle() {
      cards.forEach(card => {
