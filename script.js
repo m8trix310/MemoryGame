@@ -79,7 +79,7 @@ let lockBoard = false;
       message2.style.backgroundColor = "red";
       message1.innerHTML = "Game";
       message2.innerHTML = "Over";
-    } else if (score === 6 ) {
+    } else if (score === 7 ) {
       clearInterval(x);
       message1.style.backgroundColor = "green";
       message2.style.backgroundColor = "green";
