@@ -154,6 +154,12 @@ background: linear-gradient(to bottom right, #1C7CCC, #333333);
  }
 
  @media screen and (max-width: 320px) {
+    .memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+  }
   .score-container {
     text-align: center;
     background: -webkit-linear-gradient(rgb(149, 149, 149), rgb(246, 231, 231));
