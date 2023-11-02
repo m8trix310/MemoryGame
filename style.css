@@ -152,3 +152,20 @@ background: linear-gradient(to bottom right, #1C7CCC, #333333);
   padding: 5px 10px 5px 10px;
   text-shadow: 2px 2px 2px rgba(236, 22, 14, 0.3);
  }
+
+ @media screen and (max-width: 320px) {
+  .score-container {
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(149, 149, 149), rgb(246, 231, 231));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .score {
+    position: absolute;
+    top: 200px;
+    width: 100vw;
+  }
+  .message1, .message2 {
+    width: 100vw;
+  }
+}
