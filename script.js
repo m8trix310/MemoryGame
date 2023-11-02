@@ -77,12 +77,16 @@ let lockBoard = false;
       
       message1.style.backgroundColor = "red";
       message2.style.backgroundColor = "red";
+      message1.style.animation = "blink-text 1.9s linear infinite";
+      message2.style.animation = "blink-text 1.9s linear infinite";
       message1.innerHTML = "Game";
       message2.innerHTML = "Over";
-    } else if (score === 7 ) {
+    } else if (score === 6 ) {
       clearInterval(x);
       message1.style.backgroundColor = "green";
       message2.style.backgroundColor = "green";
+      message1.style.animation = "blink-text 1.9s linear infinite";
+      message2.style.animation = "blink-text 1.9s linear infinite";
       message1.innerHTML = "You ";
       message2.innerHTML = "Won";
     }
