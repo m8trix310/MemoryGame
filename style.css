@@ -116,6 +116,7 @@ background: linear-gradient(to bottom right, #1C7CCC, #333333);
 
 }
 
+
 .timetaken {
     text-align: center;
    color:white;
@@ -128,7 +129,7 @@ background: linear-gradient(to bottom right, #1C7CCC, #333333);
   padding: 5px 10px 5px 10px;
 
  }
-
+ 
  .score {
   text-align: center;
   width: 15%;
@@ -152,9 +153,19 @@ background: linear-gradient(to bottom right, #1C7CCC, #333333);
   padding: 5px 10px 5px 10px;
   text-shadow: 2px 2px 2px rgba(236, 22, 14, 0.3);
  }
-
+ @keyframes blink-text {
+  0% {
+   opacity: 0;
+  }
+  50% {
+   opacity: 1;
+  }
+  100% {
+   opacity: 0;
+  }
+}
  @media screen and (max-width: 320px) {
-    .memory-card {
+  .memory-card {
     width: calc(25% - 10px);
     height: calc(33.333% - 10px);
     margin: 5px;
@@ -175,3 +186,4 @@ background: linear-gradient(to bottom right, #1C7CCC, #333333);
     width: 100vw;
   }
 }
+
